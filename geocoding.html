@@ -17,12 +17,12 @@ function envoyer(){
     //Reception et affichage du résultat
 	var geocodeObjet = JSON.parse(req.responseText);
     
+    //Filtre pour récuppérer uniquement les valeurs GPS de l'adresse
     var long = geocodeObjet.features[0].geometry.coordinates[0];
-    
-    document.getElementById('result').innerHTML=long;
-    
-	//Reste à faire un filtre pour récuppérer uniquement les valeurs GPS
+    var lat = geocodeObjet.features[0].geometry.coordinates[1];
 
+    document.getElementById('result').innerHTML="Long "+long+"</br>Lat "+lat;
+    
 }    
 </script>
 
