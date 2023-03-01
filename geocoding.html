@@ -15,9 +15,10 @@ function envoyer(){
     //Envois de l'information au serveur
 	req.send(null); 
     //Reception et affichage du résultat
-	document.getElementById('result').innerHTML=req.responseText;
+	document.getElementById('result').innerHTML=JSON.parse(req.responseText);
     
 	//Reste à faire un filtre pour récuppérer uniquement les valeurs GPS
+
 }    
 </script>
 
